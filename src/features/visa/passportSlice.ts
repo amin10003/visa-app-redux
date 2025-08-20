@@ -3,32 +3,32 @@ import type {PayloadAction } from "@reduxjs/toolkit";
 
 
 
-interface VisaFormData {
+interface PassportFormData {
   fullName: string;
   nationality: string;
     passportNumber: string;
     purposeOfVisit: string;
 }
 
-const initialState: VisaFormData = {
+const initialState: PassportFormData = {
     fullName: '',
     nationality: '',
     passportNumber: '',
     purposeOfVisit: '',
 }
 
-const visaSlice = createSlice({
-  name: "visa",
+const passportSlice = createSlice({
+  name: "passport",
   initialState,
 reducers: {
-  updateVisaForm: (state, action: PayloadAction<Partial<VisaFormData>>) => {
+  updatepassportForm: (state, action: PayloadAction<Partial<PassportFormData>>) => {
     Object.assign(state, action.payload);
   },
-  resetVisaForm: () => initialState,
+  resetpassportForm: () => initialState,
 }
 });
 
-export const { updateVisaForm, resetVisaForm } = visaSlice.actions;
-export default visaSlice.reducer;
+export const { updatepassportForm, resetpassportForm } = passportSlice.actions;
+export default passportSlice.reducer;
 
 

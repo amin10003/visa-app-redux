@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function HomePage() {
   return (
-   <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-br from-indigo-50 to-blue-100 px-4 text-center">
+   <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-br from-indigo-50 to-blue-100 px-4 text-center border-b-2 border-indigo-200 max-w-lg margin-auto" >
   <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-6">
     Welcome to the <span className="text-indigo-600">Visa Application Portal</span>
   </h1>
