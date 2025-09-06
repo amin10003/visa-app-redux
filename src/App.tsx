@@ -23,7 +23,7 @@ function App() {
       <Route path="/success_Passport" element={<PassportSuccess />} />
       <Route path="/userlist" element={<UsersList />} />
       <Route path="/nodependency" element={<NoDependencyExample />} />
-      <Route path="/single-dependency" element={<SingleDependency />} />
+      <Route path="/singldependencye" element={<SingleDependency />} />
       <Route path="/multiple-dependencies" element={<MultipleDependedncies />} />
 
 

@@ -1,5 +1,18 @@
 import React, {useState, useEffect} from "react";
 
+
+interface Person {
+    firstName: string;
+    lastName: string;
+    email: string;
+}
+
+const Person: Person = {
+    firstName: "John",
+    lastName: "Doe",
+    email: "maxamed@Gmail.com"
+};
+
 const SingleDependency: React.FC = () => {
     const [ name, setName] = useState("");
 
@@ -8,10 +21,11 @@ const SingleDependency: React.FC = () => {
         console.log ("name changed to: ", name);
     }, [name]); // This effect runs only when 'name' changes
 
-    function joinNames(firstName: string, lastName: string): string {
-        return firstName + " " + lastName;
+    function joinNames(firstName: string, lastName: string): void {
+        console.log(firstName + " " + lastName);
     }
-
+        joinNames("Mohamed", "Hussein");
+       
 
 
     return (
@@ -21,7 +35,7 @@ const SingleDependency: React.FC = () => {
             <p><b>Name:</b> <input value={name} onChange={(e) => setName(e.target.value)} /></p>
             <br />
 
-            <p><b>Joined Name:</b> {joinNames("Mohamed", "Hussein")}</p> 
+            <span><b>Fullname:</b> {Person.firstName}  {Person.lastName}</span> <span><b>Email: </b>{Person.email}</span>
             
         </div>
     );
